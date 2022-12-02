@@ -356,7 +356,7 @@ mod tests {
     #[test]
     fn test_game() {
         let input = "A A\nA B\nA C\nB A\nB B\nB C\nC A\nC B\nC C\n";
-        let game = parse_game(input).unwrap().1;
+        let game = separated_list1(tag("\n"), round)(input).unwrap().1;
         assert_eq!(game.len(), 9);
         assert_eq!(
             game[0],
