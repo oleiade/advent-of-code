@@ -10,7 +10,7 @@ pub fn solve_part1(input: &[char]) -> u64 {
     input
         .windows(4)
         .into_iter()
-        .position(|w| w.iter().unique().collect_vec().len() == w.len())
+        .position(|w| w.iter().unique().count() == w.len())
         .map(|pos| pos as u64 + 4)
         .expect("should have found a message")
 }
@@ -20,7 +20,7 @@ pub fn solve_part2(input: &[char]) -> u64 {
     input
         .windows(14)
         .into_iter()
-        .position(|w| w.iter().unique().collect_vec().len() == w.len())
+        .position(|w| w.iter().unique().count() == w.len())
         .map(|pos| pos as u64 + 14)
         .expect("should have found a message")
 }
