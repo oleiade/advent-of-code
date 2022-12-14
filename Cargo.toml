@@ -3,9 +3,19 @@ edition = "2021"
 name = "twentytwentytwo"
 version = "0.1.0"
 
+[toolchain]
+channel = "nightly"
+
 [dependencies]
 aoc-runner = "0.3.0"
 aoc-runner-derive = "0.3.0"
 bitmaps = "3.2.0"
+camino = "1.1.1"
+cargo-nextest = "0.9.45"
+color-eyre = "0.6.2"
+id_tree = "1.8.0"
 itertools = "0.10.5"
 nom = "7.1.1"
+
+[dev-dependencies]
+test-case = "2.2.2"
